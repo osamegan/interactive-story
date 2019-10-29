@@ -16,9 +16,6 @@
         <br>
        <button type="button" onclick="Function1()">Zerlu, The Evil Queen of the Dark Elves</button>
        <script>
-            var chardescript1 = "Zerlu is a manevolent and cruel tyrant, who is hellbent on ruining Halloween for the skeletal village of Skelettdorf."
-            var chardescript2 = "Tod is a humble skeleton who seeks greatess in life. He is usually the one holding back Grim from making dumb mistakes."
-            var chardescript3 = "Grim is a hotheaded trouble-maker who tends to rely on his non-existent skeletal gut when making decisions."
 
 
 
@@ -26,55 +23,43 @@
                 document.getElementById("p1").innerText = chardescript1;
             }
         </script>
-        <button type="button2" onclick="Function2()">Tod, the Humble Skeleton</button>
+            <button type="button2" onclick="Function2()">Tod, the Humble Skeleton</button>
         <script>
             function Function2() {
                 document.getElementById("p1").innerText = chardescript2;
                 document.getElementById("p1").style.color = "black"
             }
         </script>
-        <button type="button3" onclick="Function3()">Grim, the Village's Resident Bonehead</button>
+        <button type="button3" onclick="Function3()">Grim, the Village's Resident Bonehead</button> -->
         <script>
             function Function3() {
                 document.getElementById("p1").innerText = chardescript3;
                 document.getElementById("p1").style.color = "black"
             }
-        </script>
-        <script>
-            function Function12() {
-                document.getElementById("p2").innerText = 
-                ;
-                document.getElementById("p2").style.color = "black"
-            }
-        </script>  
-        <button type="button22" onclick="Function22()"></button>
-        <script>
-            function Function22() {
-                document.getElementById("p2").innerText = 
-                ;
-                document.getElementById("p2").style.color = "black"
-            }
-        </script>   
-         <button type="button23" onclick="Function23()"></button>
-         <script>
-             function Function23() {
-                 document.getElementById("p2").innerText = 
-                 ;
-                 document.getElementById("p2").style.color = "black"
-             }
+           
+            //  function Function23() {
+            //     //  document.getElementById("p2").innerText = 
+            //     //  ;
+            //     //  document.getElementById("p2").style.color = "black"
+            //  }
          </script>   
         <script>
-            var zerluStory = {intro, attackingOfVillage, attckTheVillage, doNotAttackVillageEnding, TodAndGrimIntroEnding};
+            var zerluStory = [intro, attackingOfVillage, attckTheVillage, doNotAttackVillageEnding, TodAndGrimIntroEnding];
         
             function createButton(){
-                let button = document.createElement
-                ('button');
+                let button = document.createElement('button');
 
                 button.innerHTML = "My button text";
 
+                button.innerHTML = "My Button text";
+
                 button.addEventListener('click', function() {alert('Button was clicked')})
 
-                document.get
+                buttonContainer.appendChild(button);
+            }
+
+            function showStory(text){
+                let storyText = document.createElement('p');
             }
 
             // This is one block in the lucid Chart Flowchart. To call this you have to use (story.intro)
