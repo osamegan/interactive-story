@@ -9,7 +9,7 @@
     </head>
     <body>
        <p id="p1" style="color:black; font-size: x-large;">
-        Annie <br> Annie is an 8-year-old-girl who accidentally kills her 10-year-old non-biological sister and is blamed for her death. Annie spends her time trying to find a way to bring her back
+        Annie: <br> Annie is an 8-year-old-girl who accidentally kills her 10-year-old non-biological sister and is blamed for her death. Annie spends her time trying to find a way to bring her back
 
         </p>
         <br>
@@ -35,4 +35,40 @@
             
         </script>
     </body>
+    <div id="Story">
+
+    </div>
+    <div id="buttons">
+
+    </div>
+
+    <script>
+        let storyContainer = document.getElementById
+        ('story');
+
+        storyContainer.innerHTML = "part two of story";
+
+        function createButton(){
+            let button = document.createElement
+            ('button');
+
+            button.innerHTML = "Button text";
+
+            button.addEventListener('click', function 
+            () {alert('Button was clicked')})
+
+            buttonContainer.appendChild(button);
+        }
+
+        function showStory(text){
+            let storyText = document.createElement('p');
+
+            storyText.innerText = text;
+
+            storyContainer.appendChild(storyText);
+        }
+
+        for(choice of myStory.intro.choices){
+            createButton(choice);        }
+    </script>
 </html>
