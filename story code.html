@@ -1,74 +1,54 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Briana and Megan's Interactive Story</title>
-        
-    </head>
-    <body>
-       <p id="p1" style="color:black; font-size: x-large;">
-        Annie: <br> Annie is an 8-year-old-girl who accidentally kills her 10-year-old non-biological sister and is blamed for her death. Annie spends her time trying to find a way to bring her back
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <div id="intro">
+     <h1> Briana and Megan's Interactive Story <br> Annie</h1>
+     <p> Background: Karla was left in the woods by her mother after she was born. She stayed in the cold, dangerous woods for two days. A woodcutter and his wife saw the baby lying in a basket. His wife tells him they should raise the baby as their own but he is skeptical after seeing the baby move a tree with just a wave of her finger. The wife manages to persuade her husband to take in the baby and they decide to name her Karla(Annie’s mother).</p>
+ </div>
+ <div id="buttons">
 
-        </p>
-        <br>
-       <button type="button" onclick="Function1()">Let Her Die</button>
-       <script>
-            function Function1() {
-                document.getElementById("p1").innerText = "Annie and her sister were out playing in the woods. A butterfly landed on the bear Tibbers and Annie’s sister chased after it and the butterfly flew over a strong current where there was a trail of boulders. Annie’s sister ran after the butterfly and before Annie could stop her sister jumped from rock to rock and just as she landed on the third rock her foot slipped. She fell backward and into the current and was no longer in sight. Annie ran to find her he spent all day searching but she was nowhere to be found.";
-            }
-        </script>
-        <button type="button2" onclick="Function2()">Try to Help</button>
-        <script>
-            function Function2() {
-                document.getElementById("p1").innerText = "Annie and her sister were out playing in the woods. A butterfly landed on the bear Tibbers and Annie’s sister chased after it and the butterfly flew over a strong current where there was a trail of boulders overarching a towering waterfall. Annie’s sister ran after the butterfly and before Annie could stop her sister jumped from rock to rock in an attempt to catch her Annie followed, and just as her sister landed on the third rock her foot slipped. Annie leaped forward after her but as her sister fell, Tibbers turned into a plume of smoke and flames. He grew past the size of a normal grizzly, it had a thundering voice, and its eyes glowed like the embers of a never-ending fire. It reached out to hold a boulder with one claw. While the other pulled Annie close, he ignored the sister’s cries as she fell into the mist. Annie screamed to help her and started falling in hysterics. But she was held tight by the bear’s arm, it was too late, her sister had died.";
-                document.getElementById("p1").style.color = "black"
-            }
-        </script>
-        <button type="button2" onclick="Function3()">Run to Get Help</button>
-        <script>
-            function Function3() {
-                document.getElementById("p1").innerText = "Annie and her sister were out playing in the woods. A butterfly landed on the bear Tibbers and Annie’s sister chased after it and the butterfly flew over a strong current where there was a trail of boulders. Annie’s sister ran after the butterfly and before Annie could stop her sister jumped from rock to rock and just as she was about to land on the third rock her foot slipped. She fell backward and into the current and was no longer in sight. Annie ran to find anyone nearby screaming for help. No one was in sight so she ran home to get her parents. They spent the day looking for her and she was never found.";
-                document.getElementById("p1").style.color = "black"
-            }
-            
-        </script>
-    </body>
-    <div id="Story">
+ </div>
+ <script>
+ let storyContainer = document.getElementById("story");
 
-    </div>
-    <div id="buttons">
+ let buttonContainer = document.getElementById("button");
 
-    </div>
+ let history = ["intro"];
 
-    <script>
-        let storyContainer = document.getElementById
-        ('story');
+ const story = {
+     introduction : {
+         text : "Annie is an 8-year-old-girl who accidentally kills her 10-year-old non-biological sister and is blamed for her death. Annie spends her time trying to find a way to bring her back"
+            choice : [
+                ["First Choice Txt", "firstp"],
+                ["Second Choice Txt", "secp"],
+                ["Third Choice Txt", "thirdp"]
+            ]
+     },
+     firstp : {
+         text : "Annie and her sister were out playing in the woods. A butterfly landed on the bear Tibbers and Annie’s sister chased after it and the butterfly flew over a strong current where there was a trail of boulders. Annie’s sister ran after the butterfly and before Annie could stop her sister jumped from rock to rock and just as she was about to land on the third rock her foot slipped."
+         choice : [
+             ["Third Choice Txt", "firstp"],
+             ["Fourth Choice Txt", "firstp"],
+             ["Fifth Choice Txt", "firstp"]
+         ]
+     }
+ }
+ for(let choice of story.intro.choice){
+     makeButton(choice[0], choice[1])
+ }
+ function makeButton(buttonText, choice){
+     let button = document.createElement("button");
 
-        storyContainer.innerHTML = "part two of story";
+     button.innerHTML = buttonText;
 
-        function createButton(){
-            let button = document.createElement
-            ('button');
-
-            button.innerHTML = "Button text";
-
-            button.addEventListener('click', function 
-            () {alert('Button was clicked')})
-
-            buttonContainer.appendChild(button);
-        }
-
-        function showStory(text){
-            let storyText = document.createElement('p');
-
-            storyText.innerText = text;
-
-            storyContainer.appendChild(storyText);
-        }
-
-        for(choice of myStory.intro.choices){
-            createButton(choice);        }
-    </script>
+     buttonContainer.appendChild(button)
+ }
+ </script>
+</body>
 </html>
